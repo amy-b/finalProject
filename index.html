@@ -14,46 +14,56 @@
             <!--Title-->
             <h1>Set Card Game</h1>
             <a href="#" class="instructions-button"><h2>Instructions</h2></a>
-            <p id="instructions">The object of the game is to identify a SET of 3 cards from 12 cards placed face up in from of you. Each card has four features, which can vary as follows:
-            <!--Images of four categories goes here: Shape, Color, Number, Shading-->
-            <img id="instruction-img" src="" alt="instruction-img">
-            <br>A SET consists of 3 cards in which each of the cards' features, looked at one-by-one, are the same on each card, or, are different on each card. All of the features must seperately satisfy this rule. In other words: shape must be either the same on all 3 cards, or different on each of the 3 cards; color must be either the same on all 3 cards, or different on each of the 3, etc. Examples see below</p>
-            
+            <div class="instructions">
+                <p>The object of the game is to identify a SET of 3 cards from 12 cards placed face up in from of you. Each card has four features, which can vary as follows:</p>
+                <!--Images of four categories goes here: Shape, Color, Number, Shading-->
+                <img id="instruction-img" src="img/set-instructions.png" alt="instruction-img">
+                <p>A SET consists of 3 cards in which each of the cards' features, looked at one-by-one, are the same on each card, or, are different on each card. All of the features must seperately satisfy this rule. In other words: shape must be either the same on all 3 cards, or different on each of the 3 cards; color must be either the same on all 3 cards, or different on each of the 3, etc. Examples see below</p>
+            </div>
             <div>
             <a href="#" class="examples-button"><h2>Examples</h2></a>
-                <!--Images of examples go here-->
+                <div class="examples">
+                    <h2>Examples</h2>
+                    <p>For example, the following are SETs:</p>
+                    <img id="example1" src="img/set-example-1.png" alt="example1">
+                    <p>All three cards have the same shape, the same color, the same number of sybols and they all have different shading.</p>
+                    <img id="example2" src="img/set-example-2.png" alt="example2">
+                    <p>All three cards have different shapes, different colors, and different numbers of symbols and they all have the same shading.</p>
+                    <img id="example3" src="img/set-example-3.png" alt="example3">
+                    <p>All three cards have different shapes, different colors, different numbers of symbols and different shading.</p>
+                </div>
             </div> 
         </header>
 
     <section class="table">
-        <div class="game-card card-one">
+        <div class="game-card" id="card-one">
         </div>
-        <div class="game-card card-two">
+        <div class="game-card" id="card-two">
         </div>
-        <div class="game-card card-three">
+        <div class="game-card" id="card-three">
         </div>
-        <div class="game-card card-four">
+        <div class="game-card" id="card-four">
         </div>
-        <div class="game-card card-five">
+        <div class="game-card" id="card-five">
         </div>
-        <div class="game-card card-six">
+        <div class="game-card" id="card-six">
         </div>
-        <div class="game-card card-seven">
+        <div class="game-card" id="card-seven">
         </div>
-        <div class="game-card card-eight">
+        <div class="game-card" id="card-eight">
         </div>
-        <div class="game-card card-nine">
+        <div class="game-card" id="card-nine">
         </div>
-        <div class="game-card card-ten">
+        <div class="game-card" id="card-ten">
         </div>
-        <div class="game-card card-eleven">
+        <div class="game-card" id="card-eleven">
         </div>
-        <div class="game-card card-twelve">
+        <div class="game-card" id="card-twelve">
         </div>
     </section>
     </div>
   </body>
 
-    <script src="js/jquery.js"></script>
+    <script src="js/jquery-1.12.3.js"></script>
     <script src="js/index.js"></script>
 </html>

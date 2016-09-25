@@ -13,23 +13,30 @@ body{
 	width:585px;
 	float:left;
 	position:relative;
+	padding:20px;
 }
 
 .instructions-button, .examples-button{
 	background-color: white;
 	border: 1px solid #d4d4d4;
 	color: black;
-	padding: 3px 10px;
+	padding: 3px 3px;
 	text-align: center;
 	text-decoration: none;
 	display: block;
-	font-size: 15px;
+	font-size: 11px;
 	float:left;
+}
+
+.instructions, .examples {
+	display:block;
+	clear:left;
 }
 
 p{
 	font-family: 'Slabo 27px', serif;
-	display:inline-block;
+	display:block;
+	clear:left;
 }
 
 .table{
@@ -46,15 +53,13 @@ p{
 	border-bottom-width:5px;
 	border-right-width:5px;
 	background:#fff;
-	width:170px;
+	width:30%;
 	height:102px;
 	margin:5px;
 	cursor:pointer;
 }
 
-.card-four{
-	clear:left;
-}
+
 
 
 
