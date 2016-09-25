@@ -85,16 +85,18 @@ p{
 	color:purple;
 }
 
+div.red.oval.blank{
+	margin-right:10px;
+}
 
-
-.oval.blank:before {
+/*.oval.blank:before {
 	content:"\2B2D";
 	display:inline-block;
-	-ms-transform: rotate(90deg); /* IE 9 */
-	-webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+	-ms-transform: rotate(90deg); 
+	-webkit-transform: rotate(90deg); 
 	transform: rotate(90deg);
 	font-size:50px;
-}
+}*/
 
 .diamond.blank:before {
 	content:"\25C7";
@@ -117,7 +119,7 @@ p{
 }
 
 .squiggle.full.purple {
-	background: url(/img/set-img/purple-solid-squiggle.png)
+	background: url()
 	display:inline-block;
 	-ms-transform: rotate(90deg); /* IE 9 */
 	-webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
