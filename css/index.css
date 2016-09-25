@@ -41,13 +41,13 @@ p{
 
 .table{
 	height:574px;
-	width:487px;
+	width:500px;
 	overflow:hidden;
 	padding-top:15px;
 	position:relative;
 }
 
-.game-card{
+.card{
 	float:left;
 	border:1px solid #d4d4d4;
 	border-bottom-width:5px;
@@ -59,7 +59,72 @@ p{
 	cursor:pointer;
 }
 
+.shape-container div {
+  display:inline-block;
+  width:20%;
+  height:45px;
+}
 
+.shape-container{
+  margin: 0 auto;
+  width: 50%;
+  border:none;
+  position:relative;
+  top:30%;
+}
+
+.red {
+	color:red; 
+}
+
+.green{
+  color:green
+}
+
+.purple {
+	color:purple;
+}
+
+
+
+.oval.blank:before {
+	content:"\2B2D";
+	display:inline-block;
+	-ms-transform: rotate(90deg); /* IE 9 */
+	-webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+	transform: rotate(90deg);
+	font-size:50px;
+}
+
+.diamond.blank:before {
+	content:"\25C7";
+	display:inline-block;
+	font-size:50px;
+}
+
+.diamond.solid:before {
+  content:"\2666";
+  display:inline-block;
+  font-size:50px;
+  width:50px;
+}
+
+.diamond.stripe:before{
+	content:"\2666";
+  display:inline-block;
+  font-size:50px;
+  width:50px;
+}
+
+.squiggle.full.purple {
+	background: url(/img/set-img/purple-solid-squiggle.png)
+	display:inline-block;
+	-ms-transform: rotate(90deg); /* IE 9 */
+	-webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+	transform: rotate(90deg);
+	width:15px;
+	height:15px;
+}
 
 
 
