@@ -16,6 +16,9 @@ $(document).ready(function(){
 	$(".examples-button").click(revealExamples);
 	//of example button clicked and instructions are open, close instructions and vice versa
 
+	//Detect when user selects a card, changes background color, and capture card values in hand
+	$(".card-selected").click(addToHand);
+
 	//# Toggle instructions or examples when button is clicked
 	function revealInstructions(){
 		 console.log("reveal text");
@@ -25,6 +28,16 @@ $(document).ready(function(){
 	function revealExamples(){
 		$(".examples").slideToggle();
 	} 
+
+	function addToHand(){
+		// $(".card").attr("class","card-selected:hover");
+		console.log("card added to hand");
+		//capture user data 
+
+
+	}
+
+	var cards = [];
 
 	var card0 = {
 		color:"red", 
@@ -64,8 +77,8 @@ $(document).ready(function(){
 	};
 	var card6 = {
 		color:"purple", 
-		shape:"squiggle", 
-		shade:"blank", 
+		shape:"diamond", 
+		shade:"stripe", 
 		number:"two"
 	};
 	var card7 = {
@@ -75,16 +88,16 @@ $(document).ready(function(){
 		number:"one"
 	};
 	var card8 = {
-		color:"green", 
+		color:"red", 
 		shape:"squiggle", 
-		shade:"blank", 
-		number:"two"
+		shade:"full", 
+		number:"one"
 	};
 	var card9 = {
 		color:"purple", 
 		shape:"oval", 
 		shade:"stripe", 
-		number:"one"
+		number:"two"
 	};
 	var card10 = {
 		color:"red", 
@@ -111,7 +124,7 @@ $(document).ready(function(){
 	cards.push(card9);
 	cards.push(card10);
 	cards.push(card11);
-	// cards.push(card5);
+
 	console.log(cards);
 
 cards.forEach(function(element,index){
@@ -126,6 +139,14 @@ cards.forEach(function(element,index){
 var options = ["red", "green", "purple", "diamond", "oval", "squiggle", "blank", "full", "stripe", "one", "two", "three"];
 
 //Here are the values in the user's hand
+// function valuesInHand{
+// 	return addToHand <= 3;
+// }
+
+// function myFunction() {
+// 		document.getElementByID("test").innerHTML = options.filter(valuesInHand);
+// }
+
 var valuesInHand = ["red", "red", "circle", "diamond", "diamond", "diamond", "green"];
 
 //Let's create a string version of user's hand 

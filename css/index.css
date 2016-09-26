@@ -59,6 +59,23 @@ p{
 	cursor:pointer;
 }
 
+.card:hover{
+	background-color:#EBEBEB;
+}
+
+.card-selected:hover{
+	float:left;
+	border:1px solid #d4d4d4;
+	border-bottom-width:5px;
+	border-right-width:5px;
+	width:30%;
+	height:102px;
+	margin:5px;
+	cursor:pointer;
+	background-color:#EBEBEB;
+	border:gray;
+}
+
 .shape-container div {
   display:inline-block;
   width:25%;
