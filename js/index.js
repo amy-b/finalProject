@@ -53,7 +53,7 @@ $(document).ready(function(){
 	var card4 = {
 		color:"green", 
 		shape:"squiggle", 
-		shade:"blank", 
+		shade:"full", 
 		number:"three"
 	};
 	var card5 = {
@@ -82,7 +82,7 @@ $(document).ready(function(){
 	};
 	var card9 = {
 		color:"purple", 
-		shape:"squiggle", 
+		shape:"oval", 
 		shade:"stripe", 
 		number:"one"
 	};
