@@ -17,7 +17,7 @@ $(document).ready(function(){
 	//of example button clicked and instructions are open, close instructions and vice versa
 
 	//Detect when user selects a card, changes background color, and capture card values in hand
-	$(".card-selected").click(addToHand);
+	$(".card").click(addToHand);
 
 	//# Toggle instructions or examples when button is clicked
 	function revealInstructions(){
@@ -29,13 +29,66 @@ $(document).ready(function(){
 		$(".examples").slideToggle();
 	} 
 
+	var counter = 0;
+
+	var options = ["red", "green", "purple", "diamond", "oval", "squiggle", "blank", "full", "stripe", "one", "two", "three"];
+
+	var handOfCards = [];
+	
 	function addToHand(){
-		// $(".card").attr("class","card-selected:hover");
-		console.log("card added to hand");
-		//capture user data 
 
+		counter++
 
+		if (counter > 3){
+			// $(this).removeAttr(activeCard);
+			// alert('You can select up to 3 cards');
+			for(var i = 0; i < options.length; i++){
+			var re = new RegExp(options[i], "g")
+			var duplicates = handOfCards.match(re);
+			if (duplicates){
+				if (duplicates.length == 2) {
+					console.log("invalid match");
+					break;
+				}
+				else {
+					if (i == options.length-1){
+						console.log("match!");
+						alert("you win!");
+						counter = 0;
+					}
+				}
+			} else {
+				if (i == options.length-1){
+					console.log("match");
+					alert("you win!")
+					counter = 0;
+				}
+			}
+			console.log(duplicates);
+			}
+		}
+		else {
+			var activeCard = $(this);
+			$(this).addClass("card-selected")
+			
+			var propertySet = $(this).find(".shape-container div:first-child").attr("class");//This selector finds the values of card properties by pinpointing the div
+			var res = propertySet.split(" ");
+			handOfCards = handOfCards.concat(res);
+			console.log(handOfCards);
+
+			//Let's create a string version of user's hand 
+			handOfCards = JSON.stringify(handOfCards);
+			console.log(handOfCards);
+
+			//returns an array of occurences that match the the position in the array 
+			// var occurencesOfRed = handOfCards.match(/red/g).length;
+			// console.log(occurencesOfRed);
+		}
 	}
+
+	//create function if only two of any value is true, then not a set
+
+	//if not, it's a set! 
 
 	var cards = [];
 
@@ -135,9 +188,6 @@ cards.forEach(function(element,index){
 
 });
 
-//All possible values
-var options = ["red", "green", "purple", "diamond", "oval", "squiggle", "blank", "full", "stripe", "one", "two", "three"];
-
 //Here are the values in the user's hand
 // function valuesInHand{
 // 	return addToHand <= 3;
@@ -146,17 +196,6 @@ var options = ["red", "green", "purple", "diamond", "oval", "squiggle", "blank",
 // function myFunction() {
 // 		document.getElementByID("test").innerHTML = options.filter(valuesInHand);
 // }
-
-var valuesInHand = ["red", "red", "circle", "diamond", "diamond", "diamond", "green"];
-
-//Let's create a string version of user's hand 
-var valuesInHandString = JSON.stringify(valuesInHand);
-console.log(valuesInHandString)
-
-//returns an array of occurences that match the text we provide
-var occurencesOfRed = valuesInHandString.match(/red/g).length;
-//alert(occurencesOfRed)
-
 
 //psuedo code the deck (6 cards to start), looping through and creating each card object on the DOM
 //push card properties onto the card div 
