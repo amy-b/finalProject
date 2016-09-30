@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="en-us">
-  <head>
-    
+<head>
+
     <title>Set Game</title>
-   <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:700|Slabo+27px" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:700|Slabo+27px" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/index.css">   
     <link rel="stylesheet" href="css/normalize.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  </head>
+</head>
+
   <body>
     <div class="gameContainer">
         <header> 
             <!--Title-->
             <h1>Set Card Game</h1>
-            <a href="#" class="instructions-button"><h2>Instructions</h2></a>
+            <button class="btn btn-default instructions-button" type="submit
+            ">Instructions</button>
             <div class="instructions">
                 <p>The object of the game is to identify a SET of 3 cards from 12 cards placed face up in from of you. Each card has four features, which can vary as follows:</p>
                 <!--Images of four categories goes here: Shape, Color, Number, Shading-->
@@ -21,7 +24,8 @@
                 <p>A SET consists of 3 cards in which each of the cards' features, looked at one-by-one, are the same on each card, or, are different on each card. All of the features must seperately satisfy this rule. In other words: shape must be either the same on all 3 cards, or different on each of the 3 cards; color must be either the same on all 3 cards, or different on each of the 3, etc. Examples see below</p>
             </div>
             <div>
-            <a href="#" class="examples-button"><h2>Examples</h2></a>
+            <button class="btn btn-default examples-button" type="submit
+            ">Examples</button>
                 <div class="examples">
                     <h2>Examples</h2>
                     <p>For example, the following are SETs:</p>
@@ -110,10 +114,14 @@
                 <div class="red diamond blank"></div>
             </div>
         </div>
+        <section class="col-sm-3 text-center">
+            <a class="btn btn-success">Submit</a>
+        </section>
     </section>
     </div>
   </body>
 
     <script src="js/jquery-1.12.3.js"></script>
+    <script src="js/bootstrap.js"></script>
     <script src="js/index.js"></script>
 </html>
