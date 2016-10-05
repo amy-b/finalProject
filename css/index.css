@@ -6,8 +6,17 @@ body{
 	line-height: 1;
 }
 
+.container{
+	width:500px;
+	padding-right:0;
+	padding-left:0;
+	margin-right:0;
+	margin-left:0;
+}
+
 .page-header{
 	width:500px;
+	text-align: center;
 }
 
 .gameContainer{
@@ -20,21 +29,26 @@ body{
 }
 
 .instructions-button, .examples-button{
-	background-color: white;
-	border: 1px solid #d4d4d4;
-	color: black;
-	padding: 3px 3px;
 	text-align: center;
-	text-decoration: none;
 	display: block;
 	font-size: 1em;
 	float:left;
-	margin-bottom: 20px;
+	margin: 0 auto;
 }
 
-.btn-bottom{
+.button-container{
 	text-align: center;
-	padding-bottom: 10%;
+	margin-bottom: 10px;
+}
+
+/*.btn-bottom{
+	display: block;
+	clear:left;
+}*/
+
+.alert{
+	display: block;
+	clear:left;
 }
 
 .glyphicon{
@@ -44,6 +58,7 @@ body{
 .instructions, .examples {
 	display:block;
 	float:right;
+	clear:left;
 }
 
 p{

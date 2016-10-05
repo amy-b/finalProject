@@ -17,16 +17,19 @@
                 <div class="page-header">
                     <h1>Set Card Game</h1>
                 </div>
-                <button class="btn btn-default instructions-button" type="submit">Instructions</button>
+                <div class="button-container">
+                <div class="btn-group">
+                    <button class="btn btn-primary instructions-button" type="submit">How to Play</button>
+                    <button class="btn btn-primary examples-button" type="submit
+                    ">Examples</button>
+                </div>
+                </div>
                     <div class="instructions">
                         <p>The object of the game is to identify a SET of 3 cards from 12 cards placed face up in from of you. Each card has four features, which can vary as follows:</p>
                         <img id="instruction-img" src="img/set-instructions.png" alt="instruction-img">
                         <p>A SET consists of 3 cards in which each of the cards' features, looked at one-by-one, are the same on each card, or, are different on each card. All of the features must seperately satisfy this rule. In other words: shape must be either the same on all 3 cards, or different on each of the 3 cards; color must be either the same on all 3 cards, or different on each of the 3, etc. Examples see below</p>
                     </div>
-                <button class="btn btn-default examples-button" type="submit
-                ">Examples</button>
                     <div class="examples">
-                        <h2>Examples</h2>
                         <p>For example, the following are SETs:</p>
                         <img id="example1" src="img/set-example-1.png" alt="example1">
                         <p>All three cards have the same shape, the same color, the same number of sybols and they all have different shading.</p>
@@ -35,17 +38,24 @@
                         <img id="example3" src="img/set-example-3.png" alt="example3">
                         <p>All three cards have different shapes, different colors, different numbers of symbols and different shading.</p>
                     </div>
+                <hr>
+                <div class="button-container">
+                <div class="btn-group btn-bottom">
+                    <button class="btn btn-success submit">Submit</button>
+                    <button class="btn btn-default reset">Reset</button>
                 </div>
-                <div class="alert alert-block alert-error">
+                </div>
+                <div class="alert alert-error">
                   <button type="button" class="close" data-dismiss="alert">&times;</button>
                   <h4>Uh-oh!</h4>
                   <p>The combination you chose is not a set. Try again.</p>
                 </div>
-                <div class="alert alert-block alert-success">
+                <div class="alert alert-success">
                   <button type="button" class="close" data-dismiss="alert">&times;</button>
                   <h4>Awesome!</h4>
                   <p>You found a set.</p>
                 </div>
+            </div>
         </header>
 
             <section class="table">
@@ -124,13 +134,7 @@
                     </div>
                 </div>
             </section>
-        </div>
-        <div class="btn-bottom">
-            <div class="btn-group">
-                    <button class="btn btn-success submit">Submit</button>
-                    <button class="btn btn-default reset">Reset</button>
-            </div>
-        </div>
+    </div>    
 
     <footer class="calls-to-action">
         <div class="container-footer">
