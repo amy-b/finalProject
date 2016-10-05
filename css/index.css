@@ -2,8 +2,12 @@
 	box-sizing:border-box;
 }
 
-.container-header{
-	margin: 0 auto;
+body{
+	line-height: 1;
+}
+
+.page-header{
+	width:500px;
 }
 
 .gameContainer{
@@ -99,7 +103,7 @@ p{
 }
 
 .alert{
-	margin-bottom: 0;
+	margin-bottom: 
 }
 
 .alert-error{
@@ -191,6 +195,8 @@ footer{
 	-webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
 	transform: rotate(90deg);
 	font-size:60px;
+	text-align: center;
+	padding-top:8px;
 }
 
 
