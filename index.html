@@ -13,111 +13,184 @@
   <body>
     <div class="gameContainer">
         <header> 
-            <!--Title-->
-            <h1>Set Card Game</h1>
-            <button class="btn btn-default instructions-button" type="submit
-            ">Instructions</button>
-            <div class="instructions">
-                <p>The object of the game is to identify a SET of 3 cards from 12 cards placed face up in from of you. Each card has four features, which can vary as follows:</p>
-                <!--Images of four categories goes here: Shape, Color, Number, Shading-->
-                <img id="instruction-img" src="img/set-instructions.png" alt="instruction-img">
-                <p>A SET consists of 3 cards in which each of the cards' features, looked at one-by-one, are the same on each card, or, are different on each card. All of the features must seperately satisfy this rule. In other words: shape must be either the same on all 3 cards, or different on each of the 3 cards; color must be either the same on all 3 cards, or different on each of the 3, etc. Examples see below</p>
-            </div>
-            <div>
-            <button class="btn btn-default examples-button" type="submit
-            ">Examples</button>
-                <div class="examples">
-                    <h2>Examples</h2>
-                    <p>For example, the following are SETs:</p>
-                    <img id="example1" src="img/set-example-1.png" alt="example1">
-                    <p>All three cards have the same shape, the same color, the same number of sybols and they all have different shading.</p>
-                    <img id="example2" src="img/set-example-2.png" alt="example2">
-                    <p>All three cards have different shapes, different colors, and different numbers of symbols and they all have the same shading.</p>
-                    <img id="example3" src="img/set-example-3.png" alt="example3">
-                    <p>All three cards have different shapes, different colors, different numbers of symbols and different shading.</p>
+            <div class="container">
+                <div class="page-header">
+                    <h1>Set Card Game</h1>
                 </div>
-            </div> 
+                <button class="btn btn-default instructions-button" type="submit">Instructions</button>
+                    <div class="instructions">
+                        <p>The object of the game is to identify a SET of 3 cards from 12 cards placed face up in from of you. Each card has four features, which can vary as follows:</p>
+                        <img id="instruction-img" src="img/set-instructions.png" alt="instruction-img">
+                        <p>A SET consists of 3 cards in which each of the cards' features, looked at one-by-one, are the same on each card, or, are different on each card. All of the features must seperately satisfy this rule. In other words: shape must be either the same on all 3 cards, or different on each of the 3 cards; color must be either the same on all 3 cards, or different on each of the 3, etc. Examples see below</p>
+                    </div>
+                <button class="btn btn-default examples-button" type="submit
+                ">Examples</button>
+                    <div class="examples">
+                        <h2>Examples</h2>
+                        <p>For example, the following are SETs:</p>
+                        <img id="example1" src="img/set-example-1.png" alt="example1">
+                        <p>All three cards have the same shape, the same color, the same number of sybols and they all have different shading.</p>
+                        <img id="example2" src="img/set-example-2.png" alt="example2">
+                        <p>All three cards have different shapes, different colors, and different numbers of symbols and they all have the same shading.</p>
+                        <img id="example3" src="img/set-example-3.png" alt="example3">
+                        <p>All three cards have different shapes, different colors, different numbers of symbols and different shading.</p>
+                    </div>
+                </div>
+                <div class="alert alert-block alert-error">
+                  <button type="button" class="close" data-dismiss="alert">&times;</button>
+                  <h4>Uh-oh!</h4>
+                  <p>The combination you chose is not a set. Try again.</p>
+                </div>
+                <div class="alert alert-block alert-success">
+                  <button type="button" class="close" data-dismiss="alert">&times;</button>
+                  <h4>Awesome!</h4>
+                  <p>You found a set.</p>
+                </div>
         </header>
 
-    <section class="table">
-        <div id="0" class="card">
-            <div class="shape-container">
-                <div class="red oval blank"></div>
-                <div class="red oval blank"></div>
+            <section class="table">
+                <div id="0" class="card">
+                    <div class="shape-container">
+                        <div class="red oval blank"></div>
+                        <div class="red oval blank"></div>
+                    </div>
+                </div>
+                <div id="1" class="card">
+                    <div class="shape-container">
+                        <div class="green diamond blank"></div>
+                        <div class="green diamond blank"></div>
+                    </div>
+                </div>
+                <div id="2" class="card">
+                    <div class="shape-container">
+                        <div class="purple diamond blank"></div>
+                        <div class="purple diamond blank"></div>
+                    </div>
+                </div>
+                <div id="3" class="card">
+                    <div class="shape-container"> 
+                        <div class="purple squiggle full"></div>
+                        <div class="purple squiggle full"></div>
+                        <div class="purple squiggle full"></div>
+                    </div>
+                </div>
+                <div id="4" class="card">
+                    <div class="shape-container"> 
+                        <div class="green squiggle full"></div>
+                        <div class="green squiggle full"></div>
+                        <div class="green squiggle full"></div>
+                    </div>
+                </div>
+                <div id="5" class="card">
+                    <div class="shape-container"> 
+                        <div class="green oval blank"></div>
+                        <div class="green oval blank"></div>
+                        <div class="green oval blank"></div>
+                    </div>
+                </div>
+                <div id="6" class="card">
+                    <div class="shape-container"> 
+                        <div class="purple diamond stripe"></div>
+                        <div class="purple diamond stripe"></div>
+                    </div>
+                </div>
+                <div id="7" class="card">
+                    <div class="shape-container"> 
+                        <div class="green diamond stripe"></div>
+                    </div>
+                </div>
+                <div id="8" class="card">
+                    <div class="shape-container"> 
+                        <div class="red squiggle full"></div>
+                    </div>
+                </div>
+                <div id="9" class="card">
+                    <div class="shape-container"> 
+                        <div class="purple oval stripe"></div>
+                        <div class="purple oval stripe"></div>
+                    </div>
+                </div>
+                <div id="10" class="card">
+                    <div class="shape-container"> 
+                        <div class="red diamond full"></div>
+                        <div class="red diamond full"></div>
+                        <div class="red diamond full"></div>
+                    </div>
+                </div>
+                <div id="11" class="card">
+                    <div class="shape-container"> 
+                        <div class="red diamond blank"></div>
+                        <div class="red diamond blank"></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="btn-bottom">
+            <div class="btn-group">
+                    <button class="btn btn-success submit">Submit</button>
+                    <button class="btn btn-default reset">Reset</button>
             </div>
         </div>
-        <div id="1" class="card">
-            <div class="shape-container">
-                <div class="green diamond blank"></div>
-                <div class="green diamond blank"></div>
+
+    <footer class="calls-to-action">
+        <div class="container">
+<!--             <div class="row">
+                 <div class="text-center"> -->
+                    <span class="glyphicon glyphicon glyphicon-envelope glyphicon-lg
+                    "></span>
+                    <h2 class="text-center">More Games</h2>
+                    <p>Sign up to become a member and be the first to get updates on new levels of your favorite games.</p>
+                    <p><button class="btn btn-info center-block" data-toggle="modal" data-target="#myModal">Sign Up</button></p>
+                 </div>
+     </footer>
+
+    <div class="modal fade" id="myModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Sign Up to Become a Member</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="inputEmail">Email address</label>
+                        <input type="email" class="form-control" id="newsletterEmailInput" aria-describedby="emailHelp" placeholder="Enter email">
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword">Password</label>
+                        <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                    </div>
+                    <fieldset class="form-group">
+                        <legend>Keep in Touch</legend>
+                        <div class="form-check">
+                          <label class="form-check-label">
+                            <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                            Yes, I would like to receive the weekly newsletter.
+                          </label>
+                        </div>
+                        <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
+                            No thanks. 
+                        </label>
+                    </fieldset>
+                          <div class="form-group">
+                            <label for="Select1">How did you hear about us?</label>
+                            <select class="form-control" id="exampleSelect1">
+                              <option>Facebook Ad</option>
+                              <option>Instagram Ad</option>
+                              <option>Billboard</option>
+                              <option>Friend</option>
+                              <option>Other</option>
+                            </select>
+                          </div>
+                        </div>
+                <div class="modal-footer">
+                    <button data-dismiss="modal" class="btn btn-danger">Cancel</button>
+                    <button class="btn btn-primary">Sign me up!</button>
+                </div>
             </div>
         </div>
-        <div id="2" class="card">
-            <div class="shape-container">
-                <div class="purple diamond blank"></div>
-                <div class="purple diamond blank"></div>
-            </div>
-        </div>
-        <div id="3" class="card">
-            <div class="shape-container"> 
-                <div class="purple squiggle full"></div>
-                <div class="purple squiggle full"></div>
-                <div class="purple squiggle full"></div>
-            </div>
-        </div>
-        <div id="4" class="card">
-            <div class="shape-container"> 
-                <div class="green squiggle full"></div>
-                <div class="green squiggle full"></div>
-                <div class="green squiggle full"></div>
-            </div>
-        </div>
-        <div id="5" class="card">
-            <div class="shape-container"> 
-                <div class="green oval blank"></div>
-                <div class="green oval blank"></div>
-                <div class="green oval blank"></div>
-            </div>
-        </div>
-        <div id="6" class="card">
-            <div class="shape-container"> 
-                <div class="purple diamond stripe"></div>
-                <div class="purple diamond stripe"></div>
-            </div>
-        </div>
-        <div id="7" class="card">
-            <div class="shape-container"> 
-                <div class="green diamond stripe"></div>
-            </div>
-        </div>
-        <div id="8" class="card">
-            <div class="shape-container"> 
-                <div class="red squiggle full"></div>
-            </div>
-        </div>
-        <div id="9" class="card">
-            <div class="shape-container"> 
-                <div class="purple oval stripe"></div>
-                <div class="purple oval stripe"></div>
-            </div>
-        </div>
-        <div id="10" class="card">
-            <div class="shape-container"> 
-                <div class="red diamond full"></div>
-                <div class="red diamond full"></div>
-                <div class="red diamond full"></div>
-            </div>
-        </div>
-        <div id="11" class="card">
-            <div class="shape-container"> 
-                <div class="red diamond blank"></div>
-                <div class="red diamond blank"></div>
-            </div>
-        </div>
-        <section class="col-sm-3 text-center">
-            <a class="btn btn-success">Submit</a>
-        </section>
-    </section>
     </div>
   </body>
 

@@ -2,18 +2,17 @@
 	box-sizing:border-box;
 }
 
-body{
-	height:800px;
-	width:600px;
+.container-header{
+	margin: 0 auto;
 }
 
 .gameContainer{
 	font-family: 'Roboto Slab', serif;
 	min-height:520px;
 	width:585px;
-	float:left;
 	position:relative;
 	padding:20px;
+	margin: 0 auto;
 }
 
 .instructions-button, .examples-button{
@@ -24,13 +23,23 @@ body{
 	text-align: center;
 	text-decoration: none;
 	display: block;
-	font-size: 20px;
+	font-size: 1em;
 	float:left;
+	margin-bottom: 20px;
+}
+
+.btn-bottom{
+	text-align: center;
+	padding-bottom: 10%;
+}
+
+.glyphicon{
+	font-size: 30px;
 }
 
 .instructions, .examples {
 	display:block;
-	clear:left;
+	float:right;
 }
 
 p{
@@ -40,7 +49,6 @@ p{
 }
 
 .table{
-	height:574px;
 	width:500px;
 	overflow:hidden;
 	padding-top:15px;
@@ -88,6 +96,29 @@ p{
   position:relative;
   top:20%;
   text-align: center;
+}
+
+.alert{
+	margin-bottom: 0;
+}
+
+.alert-error{
+	background:#F2DEDE;
+	color:#B94A57;
+}
+
+.modal {
+	color:#3E4649 ;
+}
+
+.calls-to-action{
+	text-align:center;
+	color:#4B5A5D;
+}
+
+footer{
+	background:#ECECEC;
+	padding: 10%;
 }
 
 .red {

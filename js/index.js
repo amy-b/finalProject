@@ -14,10 +14,19 @@ $(document).ready(function(){
 	//#2 Detect when "instructions" or "examples" is clicked 
 	$(".instructions-button").click(revealInstructions);
 	$(".examples-button").click(revealExamples);
-	//of example button clicked and instructions are open, close instructions and vice versa
+	//if example button clicked and instructions are open, close instructions and vice versa
+
+	// Hide alerts when page loads
+	$(".alert").hide();
 
 	//Detect when user selects a card, changes background color, and capture card values in hand
 	$(".card").click(addToHand);
+
+	//Reload page when reset button clicked
+	$(".reset").click(refreshPage);
+
+	//Change counter to 4 when Submit button is clicked
+	//$(".submit").click(counterFour);
 
 	//# Toggle instructions or examples when button is clicked
 	function revealInstructions(){
@@ -29,38 +38,47 @@ $(document).ready(function(){
 		$(".examples").slideToggle();
 	} 
 
+	function refreshPage(){
+		window.location.reload();
+	}
+
 	var counter = 0;
 
 	var options = ["red", "green", "purple", "diamond", "oval", "squiggle", "blank", "full", "stripe", "one", "two", "three"];
 
 	var handOfCards = [];
-	
+
 	function addToHand(){
 
 		counter++
 
 		if (counter > 3){
-			// $(this).removeAttr(activeCard);
-			// alert('You can select up to 3 cards');
+			//Loops through all card options to find a match. 
 			for(var i = 0; i < options.length; i++){
 			var re = new RegExp(options[i], "g")
 			var duplicates = handOfCards.match(re);
+			//If there is a match of only two, log shows "invalid match"
 			if (duplicates){
 				if (duplicates.length == 2) {
 					console.log("invalid match");
+					$(".alert-error").show();
 					break;
 				}
+				//If all three or one is present, it's a match
 				else {
 					if (i == options.length-1){
 						console.log("match!");
-						alert("you win!");
+						$(".alert-success").show();
+						//create modal for match
 						counter = 0;
 					}
 				}
+			//completes first if statement in case last option is null
 			} else {
 				if (i == options.length-1){
 					console.log("match");
-					alert("you win!")
+					$(".alert-success").show();
+					//create modal for match
 					counter = 0;
 				}
 			}
@@ -68,6 +86,7 @@ $(document).ready(function(){
 			}
 		}
 		else {
+			//changes background color of selected card and concats all options into one string
 			var activeCard = $(this);
 			$(this).addClass("card-selected")
 			
@@ -79,16 +98,12 @@ $(document).ready(function(){
 			//Let's create a string version of user's hand 
 			handOfCards = JSON.stringify(handOfCards);
 			console.log(handOfCards);
-
-			//returns an array of occurences that match the the position in the array 
-			// var occurencesOfRed = handOfCards.match(/red/g).length;
-			// console.log(occurencesOfRed);
 		}
 	}
 
-	//create function if only two of any value is true, then not a set
-
-	//if not, it's a set! 
+//create a submit button
+//create a second level
+//create a form 
 
 	var cards = [];
 
@@ -182,44 +197,5 @@ $(document).ready(function(){
 
 cards.forEach(function(element,index){
 	}) 
-  
-  //for each card, add a set of <div>s equal to the current card's number property
-  //provide each of those new DIV's with an appropriate class based off the other propeties
-
 });
 
-//Here are the values in the user's hand
-// function valuesInHand{
-// 	return addToHand <= 3;
-// }
-
-// function myFunction() {
-// 		document.getElementByID("test").innerHTML = options.filter(valuesInHand);
-// }
-
-//psuedo code the deck (6 cards to start), looping through and creating each card object on the DOM
-//push card properties onto the card div 
-//use jQuery to display image on the cards
-//display card properties in the console
-//create a hand var currentHand=[];
-//$("div").click(function(){
-	//if (currentHand.length <3){
-		//$(this).hide();
-		//var id = $(this).attr("class");
-		//currentHand.push(cards[id]);
-		//console.log(currentHand);
-	//})
-	//else {
-		//var handArray =[];
-		//currentHand.forEach(function(obj){
-			//Object.keys(obj).map(function(key))
-			//handArray.push(obj[key]);
-
-		//})
-	//});
-	//console.log(handArray);
-	//var red = handArray.match(red);
-	//console.log("red", red)
-//}
-//});
-//conditional logic for checking if it is a set 
