@@ -122,8 +122,16 @@ p{
 
 footer{
 	background:#ECECEC;
-	padding: 10%;
 }
+
+.container-footer{
+	width:585px;
+	position:relative;
+	padding:20px;
+	margin: 0 auto;
+}
+
+/*Begins css for card elements*/
 
 .red {
 	color:red; 
@@ -229,21 +237,24 @@ footer{
 	content: ''
 }
 
-/*.diamond.solid:before {
-  content:"\2666";
-  display:inline-block;
-  font-size:50px;
-  width:50px;
-}*/
+/*Begins css for form*/
 
-/*.oval.blank:before {
-	content:"\2B2D";
-	display:inline-block;
-	-ms-transform: rotate(90deg); 
-	-webkit-transform: rotate(90deg); 
-	transform: rotate(90deg);
-	font-size:25px;
-}*/
+.form-group, legend{
+	color:#4B5A5D;
+}
+
+.form-control{
+	background-color: #ECECEC;
+}
+
+legend{
+	width:140px;
+}
+
+.form-check-label{
+	font-size: 12px;
+	color:#4B5A5D;
+}
 
 
 

@@ -25,8 +25,8 @@ $(document).ready(function(){
 	//Reload page when reset button clicked
 	$(".reset").click(refreshPage);
 
-	//Change counter to 4 when Submit button is clicked
-	//$(".submit").click(counterFour);
+	//Add +1 to counter when Submit button is clicked
+	$(".submit").click(addToHand)
 
 	//# Toggle instructions or examples when button is clicked
 	function revealInstructions(){
@@ -49,10 +49,8 @@ $(document).ready(function(){
 	var handOfCards = [];
 
 	function addToHand(){
-
-		counter++
-
-		if (counter > 3){
+		//once three cards are chosen, counter is fufilled and submit button should be clicked
+		if (counter === 3){
 			//Loops through all card options to find a match. 
 			for(var i = 0; i < options.length; i++){
 			var re = new RegExp(options[i], "g")
@@ -67,10 +65,9 @@ $(document).ready(function(){
 				//If all three or one is present, it's a match
 				else {
 					if (i == options.length-1){
-						console.log("match!");
+						console.log("match!");//tests console log
 						$(".alert-success").show();
-						//create modal for match
-						counter = 0;
+						counter = 0;//resets counter
 					}
 				}
 			//completes first if statement in case last option is null
@@ -78,7 +75,6 @@ $(document).ready(function(){
 				if (i == options.length-1){
 					console.log("match");
 					$(".alert-success").show();
-					//create modal for match
 					counter = 0;
 				}
 			}
@@ -92,18 +88,16 @@ $(document).ready(function(){
 			
 			var propertySet = $(this).find(".shape-container div:first-child").attr("class");//This selector finds the values of card properties by pinpointing the div
 			var res = propertySet.split(" ");
-			handOfCards = handOfCards.concat(res);
+			handOfCards = handOfCards.concat(res);//creates array of variables
 			console.log(handOfCards);
 
 			//Let's create a string version of user's hand 
 			handOfCards = JSON.stringify(handOfCards);
 			console.log(handOfCards);
+		//try here
 		}
+		counter++//adds increment after card is chosen 
 	}
-
-//create a submit button
-//create a second level
-//create a form 
 
 	var cards = [];
 
